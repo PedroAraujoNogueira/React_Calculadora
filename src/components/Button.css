@@ -1,0 +1,52 @@
+/* Podemos usar variaveis em css declarando elas dentro da pseudoclasse
+    :root */
+:root{
+    /* É necessario que essas variaveis comecem com -- */
+    --bg-button: #f0f0f0;
+    --border-button: solid 1px #888
+}
+
+.button{
+    font-size: 1.4em;
+    background-color: var(--bg-button);
+    border: none;
+    /* Usamos o var para referenciar as variaveis que criamos acima. */
+    border-right: var(--border-button);
+    border-bottom: var(--border-button);
+    outline: none;
+}
+/* Pseudo-classe para quando o botao for clicado. */
+.button:active{
+    background-color: #ccc;
+}
+
+/* Uma pseudo-classe CSS é uma palavra-chave adicionada a seletores que especifica um estado especial 
+do elemento selecionado. Por exemplo, :hover pode ser usado para alterar a cor de um botão 
+quando o usuário passar o cursor sobre ele.
+
+div:hover {
+  background-color: #F89B4D;
+}
+
+Pseudo-classes permitem que você aplique um estilo a um elemento não apenas em relação ao conteúdo 
+da árvore do documento, mas também em relação a fatores externos como o histórico de navegação 
+(:visited, por exemplo), o estado do seu conteúdo (como :checked em certos elementos de um formulário),
+ ou a posição do mouse (como :hover, que permite saber se o mouse está sobre um elemento ou não). */
+
+.button.double{
+     grid-column: span 2;
+}
+
+.button.triple{
+    grid-column: span 3;
+}
+
+.button.operation {
+    background-color: #fa8231;
+    color: #fff;
+}
+
+.button.operation:active{
+    background-color: #fa8231cc;
+    
+}
